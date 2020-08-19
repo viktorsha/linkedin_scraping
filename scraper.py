@@ -6,10 +6,10 @@ driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
 driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin")
 username = driver.find_element_by_name('session_key')
 # username = driver.find_element_by_class_name('input__message hidden')  # locate email form by_class_name
-username.send_keys('vika.shakun@mail.ru')  # send_keys() to simulate key strokes
+username.send_keys('email')  # send_keys() to simulate key strokes
 
 password = driver.find_element_by_name('session_password')  # locate password form by_class_name
-password.send_keys('b0n1faciy')  # send_keys() to simulate key strokes
+password.send_keys('password')  # send_keys() to simulate key strokes
 time.sleep(0.5)
 sign_in_button = driver.find_element_by_xpath('//*[@type="submit"]')
 sign_in_button.click()  # .click() to mimic button click
